@@ -151,6 +151,8 @@ public class VideoActivity extends AppCompatActivity /*implements TracksFragment
             finish();
             return;
         }
+        Log.d(TAG,"=====mVideoPath=" + mVideoPath
+        +" mVideoUri=" + mVideoUri);
         mVideoView.start();
     }
 
