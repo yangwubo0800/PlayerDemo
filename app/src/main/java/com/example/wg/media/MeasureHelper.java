@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package tv.danmaku.ijk.media.example.widget.media;
+package com.example.wg.media;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -23,7 +23,7 @@ import android.view.View;
 
 import java.lang.ref.WeakReference;
 
-import tv.danmaku.ijk.media.example.R;
+import com.example.wg.playerdemo.R;
 
 public final class MeasureHelper {
     private WeakReference<View> mWeakView;

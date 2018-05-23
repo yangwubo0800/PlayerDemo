@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package tv.danmaku.ijk.media.example.widget.media;
+package com.example.wg.media;
 
 import android.view.View;
 import android.widget.MediaController;

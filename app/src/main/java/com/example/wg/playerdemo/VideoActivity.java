@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.example.wg.playerdemo;;
+package com.example.wg.playerdemo;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -41,15 +41,15 @@ import android.widget.TextView;
 import tv.danmaku.ijk.media.player.IjkMediaPlayer;
 import tv.danmaku.ijk.media.player.misc.ITrackInfo;
 
-import tv.danmaku.ijk.media.example.R;
-import tv.danmaku.ijk.media.example.application.Settings;
-import tv.danmaku.ijk.media.example.content.RecentMediaStorage;
-import tv.danmaku.ijk.media.example.fragments.TracksFragment;
-import tv.danmaku.ijk.media.example.widget.media.AndroidMediaController;
-import tv.danmaku.ijk.media.example.widget.media.IjkVideoView;
-import tv.danmaku.ijk.media.example.widget.media.MeasureHelper;
+import com.example.wg.playerdemo.R;
+import com.example.wg.media.Settings;
+//import com.example.wg.media.content.RecentMediaStorage;
+//import com.example.wg.media.fragments.TracksFragment;
+import com.example.wg.media.AndroidMediaController;
+import com.example.wg.media.IjkVideoView;
+import com.example.wg.media.MeasureHelper;
 
-public class VideoActivity extends AppCompatActivity implements TracksFragment.ITrackHolder {
+public class VideoActivity extends AppCompatActivity /*implements TracksFragment.ITrackHolder */{
     private static final String TAG = "VideoActivity";
 
     private String mVideoPath;
@@ -116,7 +116,7 @@ public class VideoActivity extends AppCompatActivity implements TracksFragment.I
         }
 
         if (!TextUtils.isEmpty(mVideoPath)) {
-            new RecentMediaStorage(this).saveUrlAsync(mVideoPath);
+            //new RecentMediaStorage(this).saveUrlAsync(mVideoPath);
         }
 
         // init UI
@@ -214,10 +214,10 @@ public class VideoActivity extends AppCompatActivity implements TracksFragment.I
                 }
                 mDrawerLayout.closeDrawer(mRightDrawer);
             } else {
-                Fragment f = TracksFragment.newInstance();
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.right_drawer, f);
-                transaction.commit();
+//                Fragment f = TracksFragment.newInstance();
+//                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//                transaction.replace(R.id.right_drawer, f);
+//                transaction.commit();
                 mDrawerLayout.openDrawer(mRightDrawer);
             }
         }
@@ -225,29 +225,29 @@ public class VideoActivity extends AppCompatActivity implements TracksFragment.I
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public ITrackInfo[] getTrackInfo() {
-        if (mVideoView == null)
-            return null;
-
-        return mVideoView.getTrackInfo();
-    }
-
-    @Override
-    public void selectTrack(int stream) {
-        mVideoView.selectTrack(stream);
-    }
-
-    @Override
-    public void deselectTrack(int stream) {
-        mVideoView.deselectTrack(stream);
-    }
-
-    @Override
-    public int getSelectedTrack(int trackType) {
-        if (mVideoView == null)
-            return -1;
-
-        return mVideoView.getSelectedTrack(trackType);
-    }
+//    @Override
+//    public ITrackInfo[] getTrackInfo() {
+//        if (mVideoView == null)
+//            return null;
+//
+//        return mVideoView.getTrackInfo();
+//    }
+//
+//    @Override
+//    public void selectTrack(int stream) {
+//        mVideoView.selectTrack(stream);
+//    }
+//
+//    @Override
+//    public void deselectTrack(int stream) {
+//        mVideoView.deselectTrack(stream);
+//    }
+//
+//    @Override
+//    public int getSelectedTrack(int trackType) {
+//        if (mVideoView == null)
+//            return -1;
+//
+//        return mVideoView.getSelectedTrack(trackType);
+//    }
 }

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package tv.danmaku.ijk.media.example.widget.media;
+package com.example.wg.media;
 
 import android.content.Context;
 import android.support.v7.app.AlertDialog;
@@ -25,7 +25,7 @@ import android.view.ViewGroup;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
-import tv.danmaku.ijk.media.example.R;
+import com.example.wg.playerdemo.R;
 
 public class TableLayoutBinder {
     private Context mContext;
