@@ -34,6 +34,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TableLayout;
 import android.widget.TextView;
@@ -131,6 +132,11 @@ public class VideoActivity extends AppCompatActivity /*implements TracksFragment
         mHudView = (TableLayout) findViewById(R.id.hud_view);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mRightDrawer = (ViewGroup) findViewById(R.id.right_drawer);
+        // TODO: 对于直播进行的界面操作隐藏处理
+        //track信息右边侧边栏显示，可以直接隐藏菜单栏
+        //mRightDrawer.setVisibility(View.GONE);
+        //视频信息隐藏处理
+        //mHudView.setVisibility(View.GONE);
 
         mDrawerLayout.setScrimColor(Color.TRANSPARENT);
 
